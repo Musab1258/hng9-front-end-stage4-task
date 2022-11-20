@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import hr from "./images/hr.svg";
-//import Link from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const App = () => {
 
@@ -61,7 +61,7 @@ const App = () => {
 				<StyledP>Street Rate users are qualified, verified and ready to transact consumers who are interested in your fianacial products. Investments, auto and home equity advertisers are only charged if a consumer clicks on your company’s hyperlink. If they don’t click, you don’t pay! This means you only pay for qualified, engaged consumers who want to learn more about your services.</StyledP>
 
 				<StyledH4>Why advertise with us?</StyledH4>
-				<StyledP>We are a license company who gets her data from realiable sources such as national banks and the financial institution to provide accurate bank rates and as such we’ve built trust and intergrity. Our system supports Street Rate validation for 97 countries. We add support for new countries as soon as they officially adopt the Street Rate standard which will enable you or your services reach diverse people and countries. System security and data protection is important to us. <Link style={{ color: "#3381FF" }}>Learn more</Link> on what steps and technical measures we take to protect your data. For the years we’ve been providing services, more than 1000 companies have trusted us to validate payment details. </StyledP>					
+				<StyledP>We are a license company who gets her data from realiable sources such as national banks and the financial institution to provide accurate bank rates and as such we’ve built trust and intergrity. Our system supports Street Rate validation for 97 countries. We add support for new countries as soon as they officially adopt the Street Rate standard which will enable you or your services reach diverse people and countries. System security and data protection is important to us. <Link to="/" style={{ color: "#3381FF" }}>Learn more</Link> on what steps and technical measures we take to protect your data. For the years we’ve been providing services, more than 1000 companies have trusted us to validate payment details. </StyledP>					
         
         </div>
 
@@ -84,11 +84,12 @@ const App = () => {
 					<Li>Only one logo per advertiser allowed- no seperate logos for rate tables and lightbox</Li>
 				</ul>
 
+			<Figure><img src={hr} alt="line throgh" /></Figure>
+
 
 			<div>
 				<StyledH3>Contact one of our sales representatives</StyledH3>
-				<StyledP>Kindly reach out to our sales representatives for complaints, registrations and more enquires via email on <a href="mailto:hello@streetrate.com" target="_blank" rel="noopener noreferrer" style={{ color: "#3381FF" }} >hello@streetrate.com,</a> you can as well
-					reach out to us via the livechat on the app. </StyledP>
+				<StyledP>Kindly reach out to our sales representatives for complaints, registrations and more enquires via email on <a href="mailto:hello@streetrate.com" target="_blank" rel="noopener noreferrer" style={{ color: "#3381FF" }} >hello@streetrate.com,</a> you can as well reach out to us via the livechat on the app. </StyledP>
 			</div>
 
 		</MainDiv>
@@ -97,10 +98,9 @@ const App = () => {
 
 const MainDiv = styled.div`
 	max-width: 90vw;
-	margin: auto;
+	margin: 2vh auto 8vh;
 	font-family: Inter;
-  color: #0F172A;
-
+	color: #0F172A;
   @media (min-width: 481px) {
     max-width: 87vw;
   }
@@ -115,6 +115,7 @@ const StyledH1 = styled.h1`
 	line-height: 32px;
 	letter-spacing: 0em;
 	text-align: left;
+	margin-bottom: 2vh;
 	@media (min-width: 769px) {
 		font-size: 48px;
 		font-weight: 700;
@@ -129,7 +130,8 @@ const StyledH3 = styled.h3`
 	line-height: 28px;
 	letter-spacing: 0em;
 	text-align: left;
-	margin-buttom: 4vh;
+	margin-top: 2vh;
+	margin-bottom: 4vh;
   @media (min-width: 769px) {
 		font-size: 28px;
 		font-weight: 700;
@@ -144,7 +146,8 @@ const StyledH4 = styled.h4`
 	line-height: 28px;
 	letter-spacing: 0em;
 	text-align: left;
-	margin-buttom: 2vh;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 `;
 
 const StyledP = styled.p`
@@ -153,7 +156,7 @@ const StyledP = styled.p`
 	line-height: 20px;
 	letter-spacing: 0.001em;
 	text-align: left;
-	margin-buttom: 4vh;
+	margin-bottom: 4vh;
 	@media (min-width: 769px) {
 		font-family: Inter;
 		font-size: 18px;
@@ -166,13 +169,15 @@ const StyledP = styled.p`
 const Figure = styled.figure`
   margin-top: 2vh;
   margin-left: 0;
-  margin-buttom: 2vh;
+  margin-bottom: 2vh;
 `
 
 const StatsDiv = styled.div`
   width: 65%;
 	display: flex;
 	flex-direction: column;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
   @media (min-width: 481px) {
     width: 80%;
   }
@@ -208,7 +213,6 @@ const Stat = styled.p`
 	line-height: 20px;
 	letter-spacing: -0.02em;
 	text-align: left;
-  margin-top: -1.8em;
 	@media (min-width: 769px) {
 		font-size: 22px;
 		font-weight: 600;
@@ -223,6 +227,7 @@ const Period = styled.div`
 	letter-spacing: 0em;
 	text-align: left;
 	color: #6474AB;
+	margin-top: 2vh;
 	@media (min-width: 769px) {
 		font-size: 20px;
 		font-weight: 400;
@@ -236,12 +241,9 @@ const Li = styled.li`
 	font-weight: 400;
 	line-height: 20px;
 	letter-spacing: 0.001em;
-	margin-buttom: 2vh;
-  margin-left: -1vw;
+	margin-left: 2vw;
+	margin-bottom: 2vh;
 `;
 
-const Link = styled.link`
-  font-size: 14px;
-`;
 
 export default App;
