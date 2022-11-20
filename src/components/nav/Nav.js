@@ -1,4 +1,3 @@
-import classes from './Nav.module.css';
 
 
 const Nav = () => {
